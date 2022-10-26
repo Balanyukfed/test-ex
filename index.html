@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Test</title>
+</head>
+<body>
+    <div id="myModal">
+    <div class="modal">
+        <div class="modal__close-button"></div>
+        <h2>Запрос кода активации</h2>
+        <span>Введите исходный код, который выдает программа</span>
+            <form action="">
+                <div class="input__area">
+                    <input type="text" maxlength="1" placeholder="0" >
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                    <input type="text" maxlength="1" placeholder="0">
+                </div>
+            <textarea name="" id="" placeholder="Комментарий...">
+            </textarea>
+            <button class="button">Запросить код</button>
+        </form>
+        </div>
+    </div>
+    <div class="wrapper">
+        <h1>Мои программы</h1>
+        <div class="container">
+            <div class="sidebar">
+                <div class="nav">
+                    <ul>
+                        <li><a href="">Дашборд</a></li>
+                        <li><a href="">Мои заказы</a></li>
+                        <li><a href="">Мои программы</a></li>
+                        <li><a href="">Учебный центр</a></li>
+                        <li><a href="">Запрос токена</a></li>
+                        <li><a href="">Техподдержка</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-block">
+                <input type="text" placeholder="Введите название">
+                <div class="table__title table_grid">
+                    <p>Номер заказа</p>
+                    <p>Программа</p>
+                    <p>Действует до</p>
+                    <p>Скачать</p>
+                    <p>Руководство</p>
+                    <p>Статус</p>
+                </div>
+                <div class="table__row table_grid">
+                    <p>112192</p>
+                    <p>(2) Детский сад: Питание</p>
+                    <p class="target-red">08.09.2022</p>
+                    <img src="img/download.svg" alt="download">
+                    <img src="img/doc.svg" alt="document">
+                    <div class="status">
+                        <p class="status_active">Активировано (1)</p>
+                        <p>Не активировано (1)</p>
+                    </div>
+                </div>
+                <div class="table__row table_grid">
+                    <p>112192</p>
+                    <p>(2) Детский сад: Питание</p>
+                    <p>08.09.2022</p>
+                    <img src="img/download.svg" alt="download">
+                    <img src="img/doc.svg" alt="document">
+                    <div class="status">
+                        <p class="status_active">Активировано (1)</p>
+                        <p>Не активировано (1)</p>
+                    </div>
+                </div>
+                <div class="table__row table_grid">
+                    <p>112192</p>
+                    <p>(2) Детский сад: Питание</p>
+                    <p>08.09.2022</p>
+                    <img src="img/download.svg" alt="download">
+                    <img src="img/doc.svg" alt="document">
+                    <div class="status">
+                        <p class="status_active">Активировано (2)</p>
+                        <p>Не активировано (2)</p>
+                    </div>
+                </div>
+                <div class="activation">
+                    <h3>Доступно к активации: 2</h3>
+                    <p>Запросите код и активируйте программу</p>
+                    <div id="openModal" href="" class="button">Запросить код</div>
+                    <div class="activation__blocks">
+                        <div class="activation__block">
+                            <div class="activation__info-block">
+                                <div class="activation__info-string">
+                                    <p>Дата активации:</p>
+                                    <p>2022-09-15  13:54:59</p>
+                                </div>
+                                <div class="activation__info-string">
+                                    <p>Наименование компьютера:</p>
+                                    <p>HOME-PC</p>
+                                </div>
+                                <div class="activation__info-string">
+                                    <p>Комментарий:</p>
+                                    <p>Хочу перенести программу</p>
+                                </div>
+                            </div>  
+                            <a href="" class="button button-deactivate">Деактивировать</a>
+                        </div>
+                        <div class="activation__block">
+                            <div class="activation__info-block">
+                                <div class="activation__info-string">
+                                    <p>Дата активации:</p>
+                                    <p>2022-09-15  13:54:59</p>
+                                </div>
+                                <div class="activation__info-string">
+                                    <p>Наименование компьютера:</p>
+                                    <p>HOME-PC</p>
+                                </div>
+                                <div class="activation__info-string">
+                                    <p>Комментарий:</p>
+                                    <p>Хочу перенести программу</p>
+                                </div>
+                            </div>  
+                            <a href="" class="button button-deactivate">Деактивировать</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="table__row table_grid">
+                    <p>112192</p>
+                    <p>(2) Детский сад: Питание</p>
+                    <p>08.09.2022</p>
+                    <img src="img/download.svg" alt="download">
+                    <img src="img/doc.svg" alt="document">
+                    <div class="status">
+                        <p>Не активировано (1)</p>
+                    </div>
+                </div>
+                <div class="table__row table_grid">
+                    <p>112192</p>
+                    <p>(2) Детский сад: Питание</p>
+                    <p class="target-red">08.09.2022</p>
+                    <img src="img/download.svg" alt="download">
+                    <img src="img/doc.svg" alt="document">
+                    <div class="status">
+                        <p class="status_active">Активировано (1)</p>
+                        <p>Не активировано (1)</p>
+                    </div>
+                </div>
+                <div class="table__row table_grid">
+                    <p>112192</p>
+                    <p>(2) Детский сад: Питание</p>
+                    <p>08.09.2022</p>
+                    <img src="img/download.svg" alt="download">
+                    <img src="img/doc.svg" alt="document">
+                    <div class="status">
+                        <p class="status_active">Активировано (1)</p>
+                        <p>Не активировано (1)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
