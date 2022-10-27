@@ -46,17 +46,17 @@
             <div class="sidebar">
                 <div class="nav">
                     <ul>
-                        <li><a href="">Дашборд</a></li>
-                        <li><a href="">Мои заказы</a></li>
-                        <li><a href="">Мои программы</a></li>
-                        <li><a href="">Учебный центр</a></li>
-                        <li><a href="">Запрос токена</a></li>
-                        <li><a href="">Техподдержка</a></li>
+                        <li><a href="javascript:;">Дашборд</a></li>
+                        <li><a href="javascript:;">Мои заказы</a></li>
+                        <li><a class="link_active" href="javascript:;">Мои программы</a></li>
+                        <li><a href="javascript:;">Учебный центр</a></li>
+                        <li><a href="javascript:;">Запрос токена</a></li>
+                        <li><a href="javascript:;">Техподдержка</a></li>
                     </ul>
                 </div>
             </div>
             <div class="main-block">
-                <input type="text" placeholder="Введите название">
+                <input type="text" class="search" placeholder="Введите название">
                 <div class="table__title table_grid">
                     <p>Номер заказа</p>
                     <p>Программа</p>
@@ -66,42 +66,46 @@
                     <p>Статус</p>
                 </div>
                 <div class="table__row table_grid">
-                    <p>112192</p>
-                    <p>(2) Детский сад: Питание</p>
-                    <p class="target-red">08.09.2022</p>
-                    <img src="img/download.svg" alt="download">
-                    <img src="img/doc.svg" alt="document">
+                    <span class="triger_red"></span>
+                    <span class="message_red">Продлите заказ</span>
+                    <div><p class="code">112192</p></div>
+                    <div><p>(2) Детский сад: Питание</p></div>
+                    <div><p class="target-red">08.09.2022</p></div>
+                    <div><img src="img/download.svg" alt="download"></div>
+                    <div><img src="img/doc.svg" alt="document"></div>
                     <div class="status">
                         <p class="status_active">Активировано (1)</p>
                         <p>Не активировано (1)</p>
                     </div>
                 </div>
                 <div class="table__row table_grid">
-                    <p>112192</p>
-                    <p>(2) Детский сад: Питание</p>
-                    <p>08.09.2022</p>
-                    <img src="img/download.svg" alt="download">
-                    <img src="img/doc.svg" alt="document">
+                    <div><p class="code">112192</p></div>
+                    <div><p>(2) Детский сад: Питание</p></div>
+                    <div><p>08.09.2022</p></div>
+                    <div><img src="img/download.svg" alt="download"></div>
+                    <div><img src="img/doc.svg" alt="document"></div>
                     <div class="status">
                         <p class="status_active">Активировано (1)</p>
                         <p>Не активировано (1)</p>
                     </div>
                 </div>
                 <div class="table__row table_grid">
-                    <p>112192</p>
-                    <p>(2) Детский сад: Питание</p>
-                    <p>08.09.2022</p>
-                    <img src="img/download.svg" alt="download">
-                    <img src="img/doc.svg" alt="document">
+                    <div><p class="code">112192</p></div>
+                    <div><p>(2) Детский сад: Питание</p></div>
+                    <div><p>08.09.2022</p></div>
+                    <div><img src="img/download.svg" alt="download"></div>
+                    <div><img src="img/doc.svg" alt="document"></div>
                     <div class="status">
                         <p class="status_active">Активировано (2)</p>
                         <p>Не активировано (2)</p>
                     </div>
                 </div>
                 <div class="activation">
-                    <h3>Доступно к активации: 2</h3>
-                    <p>Запросите код и активируйте программу</p>
-                    <div id="openModal" href="" class="button">Запросить код</div>
+                    <div class="activation__bg">
+                        <h3>Доступно к активации: 2</h3>
+                        <p>Запросите код и активируйте программу</p>
+                        <div id="openModal" href="" class="button">Запросить код</div>
+                    </div>
                     <div class="activation__blocks">
                         <div class="activation__block">
                             <div class="activation__info-block">
@@ -112,6 +116,13 @@
                                 <div class="activation__info-string">
                                     <p>Наименование компьютера:</p>
                                     <p>HOME-PC</p>
+                                    <div class="target_info">
+                                        <div class="message_red">
+                                            <p>Роман</p>
+                                            <p>Pentium (R) Dual-Core CPU T440 @ 2.20 GHz</p>
+                                            <p>Майкрософт Windows 8.1 Профессиональная</p>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="activation__info-string">
                                     <p>Комментарий:</p>
@@ -129,6 +140,13 @@
                                 <div class="activation__info-string">
                                     <p>Наименование компьютера:</p>
                                     <p>HOME-PC</p>
+                                    <div class="target_info">
+                                        <div class="message_red">
+                                            <p>Роман</p>
+                                            <p>Pentium (R) Dual-Core CPU T440 @ 2.20 GHz</p>
+                                            <p>Майкрософт Windows 8.1 Профессиональная</p>
+                                        </div>
+                                    </div>   
                                 </div>
                                 <div class="activation__info-string">
                                     <p>Комментарий:</p>
@@ -140,32 +158,34 @@
                     </div>
                 </div>
                 <div class="table__row table_grid">
-                    <p>112192</p>
-                    <p>(2) Детский сад: Питание</p>
-                    <p>08.09.2022</p>
-                    <img src="img/download.svg" alt="download">
-                    <img src="img/doc.svg" alt="document">
+                    <div><p class="code">112192</p></div>
+                    <div><p>(2) Детский сад: Питание</p></div>
+                    <div><p>08.09.2022</p></div>
+                    <div><img src="img/download.svg" alt="download"></div>
+                    <div><img src="img/doc.svg" alt="document"></div>
                     <div class="status">
                         <p>Не активировано (1)</p>
                     </div>
                 </div>
                 <div class="table__row table_grid">
-                    <p>112192</p>
-                    <p>(2) Детский сад: Питание</p>
-                    <p class="target-red">08.09.2022</p>
-                    <img src="img/download.svg" alt="download">
-                    <img src="img/doc.svg" alt="document">
+                    <span class="triger_red"></span>
+                    <span class="message_red">Продлите заказ</span>
+                    <div><p class="code">112192</p></div>
+                    <div><p>(2) Детский сад: Питание</p></div>
+                    <div><p class="target-red">08.09.2022</p></div>
+                    <div><img src="img/download.svg" alt="download"></div>
+                    <div><img src="img/doc.svg" alt="document"></div>
                     <div class="status">
                         <p class="status_active">Активировано (1)</p>
                         <p>Не активировано (1)</p>
                     </div>
                 </div>
                 <div class="table__row table_grid">
-                    <p>112192</p>
-                    <p>(2) Детский сад: Питание</p>
-                    <p>08.09.2022</p>
-                    <img src="img/download.svg" alt="download">
-                    <img src="img/doc.svg" alt="document">
+                    <div><p class="code">112192</p></div>
+                    <div><p>(2) Детский сад: Питание</p></div>
+                    <div><p>08.09.2022</p></div>
+                    <div><img src="img/download.svg" alt="download"></div>
+                    <div><img src="img/doc.svg" alt="document"></div>
                     <div class="status">
                         <p class="status_active">Активировано (1)</p>
                         <p>Не активировано (1)</p>

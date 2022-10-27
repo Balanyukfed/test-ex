@@ -48,6 +48,7 @@ h1 {
   max-width: 1140px;
   width: 100%;
   height: 100%;
+  margin-top: 45px;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -94,6 +95,22 @@ h1 {
   color: var(--color-blue);
   font-weight: 600;
 }
+.sidebar .link_active {
+  color: var(--color-blue);
+  font-weight: 600;
+  position: relative;
+}
+.sidebar .link_active::after {
+  content: "";
+  width: 0;
+  height: 0;
+  right: 30px;
+  top: calc(50% - 12px);
+  position: absolute;
+  border-top: 12px solid transparent;
+  border-left: 15px solid var(--color-blue);
+  border-bottom: 12px solid transparent;
+}
 
 .main-block {
   padding-left: 32px;
@@ -107,17 +124,30 @@ h1 {
 .main-block input[type=text] {
   display: block;
   width: 100%;
-  height: 50px !important;
-  margin-top: 45px;
+  margin-bottom: 75px;
   position: relative;
   border: 0px solid var(--text-lower);
   border-bottom: 1px solid var(--text-lower);
   font-weight: 500;
   font-size: 16px;
 }
+.main-block .search {
+  line-height: 40;
+  height: 50px !important;
+  background-image: url("../img/find.svg");
+  background-position: 3px 12px;
+  background-repeat: no-repeat;
+  transition: 0.4s ease;
+}
+.main-block .search:focus {
+  background-position: -100px 12px;
+}
 .main-block ::-webkit-input-placeholder {
   position: relative;
+  left: 40px;
   color: var(--text-low);
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 .main-block :active, .main-block :hover, .main-block :focus {
   outline: 0;
@@ -134,31 +164,111 @@ h1 {
   align-items: center;
   justify-items: center;
   font-weight: 500;
-  gap: 10px;
   font-size: 14px;
+}
+.main-block .table_grid.table__title {
+  grid-template-rows: 20px;
+  margin-bottom: 22px;
 }
 .main-block .table__title p {
   color: var(--text-low);
   font-size: 12px;
   text-align: center;
 }
-.main-block .table__row > p:nth-child(1) {
+.main-block .table__row {
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.5);
+  margin-bottom: 15px;
+  z-index: 6;
+  position: relative;
+}
+.main-block .triger_red {
+  top: -2px;
+  left: -2px;
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: var(--color-red);
+  cursor: pointer;
+  z-index: 20;
+}
+.main-block .triger_red:hover ~ .message_red {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.6s ease;
+}
+.main-block .message_red {
+  width: 140px;
+  height: 40px;
+  top: -28px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  position: absolute;
+  border-radius: 6px;
+  color: var(--text-low);
+  box-shadow: 0px 4px 20px #E5E5E5;
+  z-index: 19;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 0.2s ease;
+}
+.main-block .message_red:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 100%;
+  top: calc(50% - 6px);
+  border-top: 15px solid transparent;
+  border-right: 15px solid #ffffff;
+  box-shadow: 0px 4px 20px #E5E5E5;
+}
+
+.code {
   font-weight: 600;
   font-size: 16px;
 }
-.main-block .target-red {
+
+.separation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.separation:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background: #EEEEEE;
+}
+
+.target-red {
   color: var(--color-red);
 }
-.main-block .status {
+
+.status {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
-.main-block .status p {
+.status p {
   color: var(--text-lower);
 }
-.main-block p.status_active {
+
+p.status_active {
   color: var(--color-green);
 }
 
@@ -167,17 +277,15 @@ h1 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 45px 25px;
+  position: relative;
+  top: -20px;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
   font-weight: 500;
-}
-.activation h3 {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 20px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.5);
 }
 .activation p, .activation a {
   display: block;
@@ -199,9 +307,26 @@ h1 {
   background: #fff;
   color: var(--color-blue);
 }
-.activation > .button {
+
+.activation__bg {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0px 25px;
+  position: relative;
+  background: url("../img/activ__bg.png");
+  z-index: 5;
+}
+.activation__bg h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+.activation__bg > .button {
   margin-top: 30px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
 
 .activation__blocks {
@@ -211,7 +336,6 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  row-gap: 75px;
 }
 
 .activation__block {
@@ -222,6 +346,11 @@ h1 {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  padding: 0px 25px 45px;
+  margin-top: 30px;
+}
+.activation__block:not(:last-child) {
+  border-bottom: 1px solid #EEEEEE;
 }
 
 .activation__info-block {
@@ -244,6 +373,52 @@ h1 {
 }
 .activation__info-string p:first-child {
   color: var(--text-low);
+}
+
+.target_info {
+  background: url("../img/info.svg");
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+  position: relative;
+  color: var(--text-low) !important;
+}
+.target_info .message_red {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: auto;
+  top: -28px;
+  left: 20px;
+  display: block;
+  padding: 19px 25px 30px;
+  background: #fff;
+  position: absolute;
+  border-radius: 6px;
+  box-shadow: 0px 4px 20px #E5E5E5;
+  z-index: 19;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 0.2s ease;
+  font-size: 12px;
+}
+.target_info .message_red:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 100%;
+  top: 25px;
+  border-top: 15px solid transparent;
+  border-right: 15px solid #fff;
+  box-shadow: 0px 4px 20px #E5E5E5;
+}
+
+.target_info:hover .message_red {
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.6s ease;
 }
 
 .button.button-deactivate {
@@ -390,6 +565,7 @@ textarea {
   font-weight: 500;
   font-size: 16px;
   color: var(--text-low);
+  cursor: pointer;
 }
 .button:hover {
   background: var(--color-blue);
