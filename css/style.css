@@ -31,7 +31,7 @@ a {
 
 .wrapper {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -120,6 +120,7 @@ h1 {
   flex-direction: column;
   align-items: start;
   justify-content: start;
+  position: relative;
 }
 .main-block input[type=text] {
   display: block;
@@ -178,8 +179,8 @@ h1 {
 .main-block .table__row {
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba(238, 238, 238, 0.5);
-  margin-bottom: 15px;
   z-index: 6;
+  margin-bottom: 15px;
   position: relative;
 }
 .main-block .triger_red {
@@ -571,4 +572,16 @@ textarea {
   background: var(--color-blue);
   color: #fff;
   border: 2px solid var(--color-blue);
+}
+
+.watch-more {
+  color: var(--text-low);
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  transition: 0.5s ease;
+}
+.watch-more:hover {
+  color: var(--color-blue);
+  right: 35px;
 }/*# sourceMappingURL=style.css.map */
